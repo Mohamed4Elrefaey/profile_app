@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">profile_app</string>
+    <string name="welcome">Welcome \nto our world</string>
+    <string name="paragraph">"Hi, I’m Asmaa Hamed, a passionate\nAndroid developer,\nI enjoy turning ideas into functional\nand engaging apps, always striving to\nimprove user experiences. With a focus\non continuous learning."</string>
+    <string name="btn">Get Started</string>
+    <string name="profile">Profile</string>
+    <string name="mohamed">Mohammed Hamed</string>
+    <string name="gmail">mh0131553@gmail.com</string>
+    <string name="Notification">Notification</string>
+    <string name="Calender">Calender</string>
+    <string name="Gallery">Gallery</string>
+    <string name="My_Playlist">My Playlist</string>
+    <string name="Share">Share</string>
+    <string name="Loge_oUt">Logeout</string>
+</resources>
