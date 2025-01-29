@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
-import com.example.profile_app.R
 import com.example.profile_app.databinding.IntroActivityMainBinding
 
 class IntroActivity : AppCompatActivity() {
@@ -21,7 +19,7 @@ class IntroActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.getStart.setOnClickListener(){
-            val intentTo =  Intent(this, mainActivity::class.java)
+            val intentTo =  Intent(this, secondActivity::class.java)
             startActivity(intentTo)
         }
     }

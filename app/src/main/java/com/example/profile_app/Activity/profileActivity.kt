@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.profile_app.R
 import com.example.profile_app.databinding.ActivityProfileBinding
 
 class profileActivity : AppCompatActivity() {
@@ -17,7 +15,7 @@ class profileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.back.setOnClickListener(){
-            val backTo = Intent(this, IntroActivity::class.java)
+            val backTo = Intent(this, secondActivity::class.java)
             startActivity(backTo)
         }
 

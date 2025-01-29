@@ -1,5 +1,6 @@
 package com.example.profile_app.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +8,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.profile_app.Adapter.trendsData
 import com.example.profile_app.Adapter.Myadapter
 import com.example.profile_app.R
-import com.example.profile_app.databinding.ActivityThreeBinding
+import com.example.profile_app.databinding.ActivitySecondBinding
 
 
-class mainActivity : AppCompatActivity() {
 
-    lateinit var  binding : ActivityThreeBinding
+class secondActivity : AppCompatActivity() {
+
+    lateinit var  binding : ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityThreeBinding.inflate(layoutInflater)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
 
@@ -33,6 +35,11 @@ class mainActivity : AppCompatActivity() {
         binding.rv.adapter = adapter
         binding.rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
 
+
+        binding.profileBtn.setOnClickListener(){
+            var intent = Intent(this, profileActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
