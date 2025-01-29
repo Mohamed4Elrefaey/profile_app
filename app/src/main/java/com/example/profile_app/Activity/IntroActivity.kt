@@ -1,24 +1,27 @@
-package com.example.profile_app
+package com.example.profile_app.Activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.profile_app.R
+import com.example.profile_app.databinding.IntroActivityMainBinding
 
 class IntroActivity : AppCompatActivity() {
 
-
+    lateinit var binding: IntroActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        binding = IntroActivityMainBinding.inflate(layoutInflater)
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.intro_activity_main)
+        setContentView(binding.root)
 
-        var start = findViewById<AppCompatButton>(R.id.get_start)
-
-        start.setOnClickListener(){
-            val intentTo =  Intent(this, profileActivity::class.java)
+        binding.getStart.setOnClickListener(){
+            val intentTo =  Intent(this, mainActivity::class.java)
             startActivity(intentTo)
         }
     }

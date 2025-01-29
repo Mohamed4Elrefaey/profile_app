@@ -26,6 +26,12 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -33,6 +39,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+
+
+
 }
 
 dependencies {
@@ -45,5 +55,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.android.material:material:1.13.0-alpha09")
+    implementation("com.github.bumptech:glide:4.15.1")
 
 }

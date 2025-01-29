@@ -1,23 +1,22 @@
-package com.example.profile_app
+package com.example.profile_app.Activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.profile_app.R
+import com.example.profile_app.databinding.ActivityProfileBinding
 
 class profileActivity : AppCompatActivity() {
+    lateinit var binding: ActivityProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityProfileBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_profile)
+        setContentView(binding.root)
 
-        val backArrow = findViewById<ConstraintLayout>(R.id.back)
-
-        backArrow.setOnClickListener(){
+        binding.back.setOnClickListener(){
             val backTo = Intent(this, IntroActivity::class.java)
             startActivity(backTo)
         }

@@ -25,4 +25,6 @@
     <string name="wallet">Wallet</string>
     <string name="home">Home</string>
     <string name="home_btn">Home</string>
+    <string name="title">title</string>
+    <string name="subtitle">subtitle</string>
 </resources>
