@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.libs
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -45,6 +47,10 @@ android {
 
 }
 
+
+
+
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -55,7 +61,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.google.android.material:material:1.13.0-alpha09")
-    implementation("com.github.bumptech:glide:4.15.1")
-
+    implementation(libs.google.material.v1130alpha09)
 }
